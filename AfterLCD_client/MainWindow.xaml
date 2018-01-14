@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AfterLCD_client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="AfterLCD Client v0.1" Height="148.221" Width="381.38" Foreground="Black">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD4D4D4" Offset="1"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="0" >
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Center" Margin="223,0,12,8" VerticalAlignment="Bottom" Width="128" Height="30" Click="StartButton_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <ComboBox x:Name="CurrentSerialPort" HorizontalAlignment="Left" Margin="122,8,0,0" VerticalAlignment="Top" Width="231">
+        </ComboBox>
+        <Label Content="Arduino Serial Port:" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Top"/>
+        <Label Content="Remote Server URI:" HorizontalAlignment="Left" Margin="5,35,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CurrentURI" HorizontalAlignment="Left" Height="23" Margin="122,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" TextChanged="TextBox_TextChanged"/>
+        <Label Content="by Ijat.my" HorizontalAlignment="Left" Margin="5,83,0,0" VerticalAlignment="Top" Foreground="#FF005DFF"/>
     </Grid>
 </Window>
